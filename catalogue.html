@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Stampee's super special stamps :: Catalogue de produit</title>
+	<meta name="description" content="Livrable numéro 5 du projet d'enchères de Lord Stampee">
+
+	<!-- Fonts -->
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="./styles/main.css">
+	<link rel="stylesheet" href="./styles/catalog.css">
+
+	<!-- Scripts -->
+	<script type="module" src="./scripts/script.js"></script>
+	
+</head>
+
+<body>
+	<!-- en-tête hero -->
+	<header class="hero">
+		<div class="text-wrapper content">
+			<div class="blue-overlay">
+				
+				<svg class="ornement ornement-top" width="240" height="40">
+					<use href="assets/img/ornements.svg#ornement-01" />
+				</svg>
+				<div class="text">
+					<h1>Les catalogues du Lord</h1>
+					<span class="tagline">Nos timbres, votre collection...</span>
+					<small>Depuis 2021</small>
+				</div>
+				<svg class="ornement ornement-bottom" width="240" height="40">
+					<use href="assets/img/ornements.svg#ornement-02" />
+				</svg>
+				
+			</div>
+		</div>
+	</header>
+	<!-- /en-tête -->
+	
+
+	<!-- navigation principale :: click menu -->
+	<nav aria-label="Primary navigation">
+		<div class="menu-wrapper content">
+			<ul class="click-menu">
+				<li><a class="top-level-action" href="#">Accueil</a></li>
+			
+				<li aria-expanded="false" data-menu-panel="catalogue">
+					<button class="top-level-action" type="button">
+						Catalogue de produits
+						<svg class="down-arrow" width="16" height="16">
+							<use href="assets/img/down-arrow.svg#arrow" />
+						</svg>
+					</button>
+					<ul aria-hidden="true">
+						<li class="no-action-item" aria-current="page"><span >Consulter le catalogue</span></li>
+						<li class="no-action-item">
+							<span>Effectuer une rechercher</span>
+			
+							<div class="search-box">
+								<input type="text" aria-label="Recherche" placeholder="Votre recherche...">
+								<button class="white-overlay" type="button">
+									<span class="visually-hidden">Lancer la recherche</span>
+									<svg class="magnifying-glass-icon" width="16" height="16">
+										<use href="assets/img/magnifying-glass-icon.svg#magnifying-glass" />
+									</svg>
+								</button>
+							</div>
+						</li>
+					</ul>
+				</li>
+				<li aria-expanded="false" data-menu-panel="actualites">
+					<button class="top-level-action" type="button">
+						Actualités
+						<svg class="down-arrow" width="16" height="16">
+							<use href="assets/img/down-arrow.svg#arrow" />
+						</svg>
+					</button>
+					<ul aria-hidden="true">
+						<li><a href="#">Toutes les actualités</a></li>
+						<li><a href="#">Timbres</a></li>
+						<li><a href="#">Enchères</a></li>
+						<li><a href="#">Bridge</a></li>
+					</ul>
+				</li>
+				<li aria-expanded="false" data-menu-panel="contacts">
+					<button class="top-level-action" type="button">
+						Contacts
+						<svg class="down-arrow" width="16" height="16">
+							<use href="assets/img/down-arrow.svg#arrow" />
+						</svg>
+					</button>
+					<ul aria-hidden="true">
+						<li><a href="#">Angleterre</a></li>
+						<li><a href="#">Canada</a></li>
+						<li><a href="#">États-Unis</a></li>
+						<li><a href="#">Australie</a></li>
+					</ul>
+				</li>
+				<li>
+					<button class="top-level-action" type="button">S'authentifier&nbsp;/ s'enregistrer</button>
+				</li>
+			</ul>
+		</div>
+	</nav>
+	<!-- /navigation principale-->
+
+
+	<!-- contenu -->
+	<main class="content flow-content-kilo">
+		<!-- fil d'Ariane -->
+		<nav class="breadcrumb" aria-label="Fil d'Ariane">
+			<a class="text-link" href="#">Accueil</a>
+			<svg class="separator" width="16" height="16">
+				<use href="assets/img/down-arrow.svg#arrow" />
+			</svg>
+			<span aria-current="page">Catalogue des enchères</span>
+		</nav>
+
+		<h1>Catalogue des enchères</h1>
+
+		<!-- panneau entier catalogue avec options de liste et recherche -->
+		<div class="catalog-panel">
+			<div class="filters-bar">
+				<!-- <h2>Filtres</h2> -->
+
+				<form action="" class="flow-content">
+					<fieldset>
+						<details>
+							<summary>
+								<legend>Condition</legend>
+							</summary>
+
+							<div class="inputs">
+								<a class="more-info text-link" href="#">Nos critères d'évaluation</a>
+								
+								<label>
+									<input name="conditonMint" type="checkbox">
+									Parfaite
+								</label>
+								
+								<label>
+									<input name="conditionNearMint" type="checkbox">
+									Presque parfaite
+								</label>
+								<label>
+									<input name="conditionExcellent" type="checkbox">
+									Excellente
+								</label>
+								
+								<label>
+									<input name="conditionVeryGood" type="checkbox">
+									Très bonne
+								</label>
+								
+								<label>
+									<input name="conditionGood" type="checkbox">
+									Bonne
+								</label>
+							</div>
+						</details>
+					</fieldset>
+
+					<fieldset>
+						<details>
+							<summary>
+								<legend>Prix</legend>
+							</summary>
+
+							<div class="inputs">
+								<label>
+									Montant minimum :
+									<input type="number">
+								</label>
+								
+								<label>
+									Montant maximum
+									<input type="number">
+								</label>
+							</div>
+						</details>
+					</fieldset>
+
+					<fieldset>
+						<details>
+							<summary>
+								<legend>Thème</legend>
+							</summary>
+							
+							<div class="inputs">
+								<label>
+									<input type="checkbox">
+									Animaux
+								</label>
+								
+								<label>
+									<input type="checkbox">
+									Guerre
+								</label>
+								<label>
+									<input type="checkbox">
+									Personnalités
+								</label>
+								
+								<label>
+									<input type="checkbox">
+									Culture populaire
+								</label>
+								
+								<label>
+									<input type="checkbox">
+									Moyens de transport
+								</label>
+							</div>
+						</details>
+					</fieldset>
+
+					<fieldset>
+						<details>
+							<summary>
+								<legend>Certification</legend>
+							</summary>
+							
+							<div class="inputs">
+								<a class="more-info text-link" href="#">Qu'est-ce que la certification&nbsp;?</a>
+								
+								<label>
+									<input type="checkbox">
+									Certifiés
+								</label>
+								
+								<label>
+									<input type="checkbox">
+									Non-certifiés
+								</label>
+							</div>
+						</details>
+					</fieldset>
+
+					<div class="filters-actions">
+						<button type="reset">Appliquer les filtres</button>
+						<button type="reset">Réinitialiser les filtres</button>
+					</div>
+				</form>
+			</div>
+
+			<div class="item-listing grid-view flow-content">
+				<div class="toolbar">
+					<div class="choose-grid-display">
+						<label>Type d'affichage</label>
+						<div class="grid-display-options">
+							<button type="button" disabled>
+								<svg class="grid-icon" width="16" height="16">
+									<use href="assets/img/grid-icon.svg#grid-icon" />
+								</svg>
+								<span>Grille</span>
+							</button>
+							<button type="button">
+								<svg class="grid-icon" width="16" height="16">
+									<use href="assets/img/list-icon.svg#list-icon" />
+								</svg>
+								<span>Liste</span>
+							</button>
+						</div>
+					</div>
+
+					<div class="choose-sort-order">
+						<label>Trier par</label>
+						<div class="sort-order">
+							<select name="sortOrder">
+								<option value="" selected disabled>Choisir un tri</option>
+								<option value="">Prix - min. à max.</option>
+								<option value="">Prix - max. à min.</option>
+								<option value="">Date de parution - récents</option>
+								<option value="">Date de parution - anciens</option>
+								<option value="">Favoris</option>
+								<option value="">Pays</option>
+							</select>
+						</div>
+					</div>
+
+					<div class="search">
+						<label>Recherche</label>
+
+						<div class="search-box">
+							<input type="text" aria-label="Recherche" placeholder="Votre recherche...">
+							<button type="button">
+								<span class="visually-hidden">Lancer la recherche</span>
+								<svg class="magnifying-glass-icon" width="16" height="16">
+									<use href="assets/img/magnifying-glass-icon.svg#magnifying-glass" />
+								</svg>
+							</button>
+						</div>
+					</div>
+				</div>
+				<div class="grid">
+					<article class="lot-card">
+						<picture>
+							<img src="assets/img/stamps-db/stamp-1.jpg" alt="Timbre brun représentant un quelconque kaiser Autrichien">
+						</picture>
+						
+						<!-- info timbre -->
+						<div class="info flow-content">				
+							<header>
+								<div class="time-left">
+									<svg width="16" height="16">
+										<use href="assets/img/feather-core-clock.svg#clock" />
+									</svg>
+									<span>12j 22h 15m</span>
+								</div>
+								<h3>Lot 78 - AUSTRIA fine</h3>
+							</header>
+						
+							<div class="toggle-favorite-wrapper">
+								<label class="toggle-favorite">
+									<input type="checkbox" class="visually-hidden">
+									<svg class="favorite-icon" width="16" height="16">
+										<use href="assets/img/five_pointed_star_solid.svg#fav-star" />
+									</svg>
+									Ajouter à vos favoris
+								</label>
+							</div>						
+						
+							<div class="description">
+								<p>Accession unsurf paper IMPERF PAIR,Michel 141x U,NHM,2</p>
+							</div>
+						
+							<div class="bidding-properties">
+								<div class="current-bid">
+									<span>Mise courante : </span>
+									<span class="bid">2 250,00&nbsp;$</span>
+								</div>
+							</div>
+
+							<div class="card-actions">
+								<button class="place-your-bid" type="button">Placer une mise</button>
+								<a href="#" class="cta">Détails</a>
+							</div>
+						</div>
+						<!-- /info timbre -->
+
+						<div class="tags-display">
+							<span class="lords-pick">Choix du Lord</span>
+						</div>		
+					</article>
+
+					<article class="lot-card">
+						<picture>
+							<img src="assets/img/stamps-db/stamp-2.jpg" alt="Timbre brun représentant un quelconque kaiser Autrichien">
+						</picture>
+						
+						<!-- info timbre -->
+						<div class="info flow-content">
+							<header>
+								<div class="time-left">
+									<svg width="16" height="16">
+										<use href="assets/img/feather-core-clock.svg#clock" />
+									</svg>
+									<span>12j 22h 15m</span>
+								</div>
+								
+								<h3>Lot 78 焼き鳥 - 1867-84 50k brown fine</h3>
+							</header>
+						
+							<label class="toggle-favorite">
+								<input type="checkbox" class="visually-hidden">
+								<svg class="favorite-icon" width="16" height="16">
+									<use href="assets/img/five_pointed_star_solid.svg#fav-star" />
+								</svg>
+								Ajouter à vos favoris				
+							</label>							
+							
+							<p class="description">Accession unsurf paper IMPERF PAIR,Michel 141x U,NHM,2</p>
+							
+							<div class="bidding-properties">
+								<div class="current-bid">
+									<span>Mise courante&nbsp;:</span>
+									<span class="bid">150,00&nbsp;$</span>
+								</div>
+							</div>
+
+							<div class="card-actions">
+								<button class="place-your-bid" type="button">Placer une mise</button>
+								<a href="#" class="cta">Détails</a>
+							</div>				
+						</div>
+						<!-- /info timbre -->
+					</article>
+						
+					<article class="lot-card">
+						<picture>
+							<img src="assets/img/stamps-db/stamp-3.jpg" alt="Timbre brun représentant un quelconque kaiser Autrichien">
+						</picture>
+						
+						<!-- info timbre -->
+						<div class="info flow-content">
+							<header>
+								<div class="time-left">
+									<svg width="16" height="16">
+										<use href="assets/img/feather-core-clock.svg#clock" />
+									</svg>
+									<span>12j 22h 15m</span>
+								</div>
+								<h3>Luxembourg 1962 Early Issue Fine Mint Hinged 1.50F. NW-134574</h3>
+							</header>
+						
+							<label class="toggle-favorite">
+								<input type="checkbox" class="visually-hidden">
+								<svg class="favorite-icon" width="16" height="16">
+									<use href="assets/img/five_pointed_star_solid.svg#fav-star" />
+								</svg>
+								Ajouter à vos favoris				
+							</label>
+												
+							<p class="description">Accession unsurf paper IMPERF PAIR,Michel 141x U,NHM,2</p>
+							
+							<div class="bidding-properties">
+								<div class="current-bid">
+									<span>Mise courante : </span>
+									<span class="bid">5,00&nbsp;$</span>
+								</div>
+							</div>
+
+							<div class="card-actions">
+								<button class="place-your-bid" type="button">Placer une mise</button>
+								<a href="#" class="cta">Détails</a>
+							</div>				
+						</div>
+						<!-- /info timbre -->
+					</article>
+
+					<article class="lot-card">
+						<picture>
+							<img src="assets/img/stamps-db/stamp-4.jpg" alt="Timbre brun représentant un quelconque kaiser Autrichien">
+						</picture>
+						
+						<!-- info timbre -->
+						<div class="info flow-content">
+							<header>
+								<div class="time-left">
+									<svg width="16" height="16">
+										<use href="assets/img/feather-core-clock.svg#clock" />
+									</svg>
+									<span>12j 22h 15m</span>
+								</div>
+								<h3>Luxembourg 1962 Early Issue Fine Mint Hinged 1.50F. NW-134574</h3>
+							</header>	
+						
+							<label class="toggle-favorite">
+								<input type="checkbox" class="visually-hidden">
+								<svg class="favorite-icon" width="16" height="16">
+									<use href="assets/img/five_pointed_star_solid.svg#fav-star" />
+								</svg>
+								Ajouter à vos favoris				
+							</label>
+												
+							<p class="description">Accession unsurf paper IMPERF PAIR,Michel 141x U,NHM,2</p>
+							
+							<div class="bidding-properties">
+								<div class="current-bid">
+									<span>Mise courante : </span>
+									<span class="bid">0,70&nbsp;$</span>
+								</div>
+							</div>
+
+							<div class="card-actions">
+								<button class="place-your-bid" type="button">Placer une mise</button>
+								<a href="#" class="cta">Détails</a>
+							</div>				
+						</div>
+						<!-- /info timbre -->
+					</article>
+
+					<article class="lot-card">
+						<picture>
+							<img src="assets/img/stamps-db/stamp-5.jpg" alt="Timbre brun représentant un quelconque kaiser Autrichien">
+						</picture>
+						
+						<!-- info timbre -->
+						<div class="info flow-content">
+							<header>
+								<div class="time-left">
+									<svg width="16" height="16">
+										<use href="assets/img/feather-core-clock.svg#clock" />
+									</svg>
+									<span>12j 22h 15m</span>
+								</div>
+								<h3>Bermuda #318 Used</h3>
+							</header>
+													
+							<label class="toggle-favorite">
+								<input type="checkbox" class="visually-hidden">
+								<svg class="favorite-icon" width="16" height="16">
+									<use href="assets/img/five_pointed_star_solid.svg#fav-star" />
+								</svg>
+								Ajouter à vos favoris				
+							</label>
+												
+							<p class="description">Accession unsurf paper IMPERF PAIR,Michel 141x U,NHM,2</p>
+							
+							<div class="bidding-properties">
+								<div class="current-bid">
+									<span>Mise courante : </span>
+									<span class="bid">123,00&nbsp;$</span>
+								</div>
+							</div>
+
+							<div class="card-actions">
+								<button class="place-your-bid" type="button">Placer une mise</button>
+								<a href="#" class="cta">Détails</a>
+							</div>				
+						</div>
+						<!-- /info timbre -->
+					</article>
+
+					<article class="lot-card">
+						<picture>
+							<img src="assets/img/stamps-db/stamp-6.jpg" alt="Timbre brun représentant un quelconque kaiser Autrichien">
+						</picture>
+						
+						<!-- info timbre -->
+						<div class="info flow-content">
+							<header>
+								<div class="time-left">
+									<svg width="16" height="16">
+										<use href="assets/img/feather-core-clock.svg#clock" />
+									</svg>
+									<span>12j 22h 15m</span>
+								</div>
+								<h3>Guatemala #23 Unused NG</h3>
+							</header>
+						
+							<label class="toggle-favorite">
+								<input type="checkbox" class="visually-hidden">
+								<svg class="favorite-icon" width="16" height="16">
+									<use href="assets/img/five_pointed_star_solid.svg#fav-star" />
+								</svg>
+								Ajouter à vos favoris				
+							</label>
+												
+							<p class="description">Accession unsurf paper IMPERF PAIR,Michel 141x U,NHM,2</p>
+							
+							<div class="bidding-properties">
+								<div class="current-bid">
+									<span>Mise courante : </span>
+									<span class="bid">88 250,00&nbsp;$</span>
+								</div>
+							</div>
+
+							<div class="card-actions">
+								<button class="place-your-bid" type="button">Placer une mise</button>
+								<a href="#" class="cta">Détails</a>
+							</div>				
+						</div>
+						<!-- /info timbre -->
+
+						<div class="tags-display">
+							<span class="lords-pick">Choix du Lord</span>
+						</div>
+					</article>
+
+					<article class="lot-card">
+						<picture>
+							<img src="assets/img/stamps-db/stamp-7.jpg" alt="Timbre brun représentant un quelconque kaiser Autrichien">
+						</picture>
+						
+						<!-- info timbre -->
+						<div class="info flow-content">
+							<header>
+								<div class="time-left">
+									<svg width="16" height="16">
+										<use href="assets/img/feather-core-clock.svg#clock" />
+									</svg>
+									<span>12j 22h 15m</span>
+								</div>
+								<h3>BERMUDA EDVII SG35, ½d black & green, FINE USED</h3>
+							</header>
+						
+							<label class="toggle-favorite">
+								<input type="checkbox" class="visually-hidden">
+								<svg class="favorite-icon" width="16" height="16">
+									<use href="assets/img/five_pointed_star_solid.svg#fav-star" />
+								</svg>
+								Ajouter à vos favoris				
+							</label>
+												
+							<p class="description">Accession unsurf paper IMPERF PAIR,Michel 141x U,NHM,2</p>
+							
+							<div class="bidding-properties">
+								<div class="current-bid">
+									<span>Mise courante : </span>
+									<span class="bid">888,00&nbsp;$</span>
+								</div>
+							</div>
+
+							<div class="card-actions">
+								<button class="place-your-bid" type="button">Placer une mise</button>
+								<a href="#" class="cta">Détails</a>
+							</div>				
+						</div>
+						<!-- /info timbre -->
+					</article>
+
+					<article class="lot-card">
+						<picture>
+							<img src="assets/img/stamps-db/stamp-8.jpg" alt="Timbre brun représentant un quelconque kaiser Autrichien">
+						</picture>
+						
+						<!-- info timbre -->
+						<div class="info flow-content">
+							<header>
+								<div class="time-left">
+									<svg width="16" height="16">
+										<use href="assets/img/feather-core-clock.svg#clock" />
+									</svg>
+									<span>12j 22h 15m</span>
+								</div>
+								<h3>GIBRALTAR GVI SG130a, 10s black & blue, NH MINT. Cat £42. PERF 13</h3>
+							</header>
+						
+							<label class="toggle-favorite">
+								<input type="checkbox" class="visually-hidden">
+								<svg class="favorite-icon" width="16" height="16">
+									<use href="assets/img/five_pointed_star_solid.svg#fav-star" />
+								</svg>
+								Ajouter à vos favoris				
+							</label>
+												
+							<p class="description">Accession unsurf paper IMPERF PAIR,Michel 141x U,NHM,2</p>
+							
+							<div class="bidding-properties">
+								<div class="current-bid">
+									<span>Mise courante : </span>
+									<span class="bid">1,50&nbsp;$</span>
+								</div>
+							</div>
+
+							<div class="card-actions">
+								<button class="place-your-bid" type="button">Placer une mise</button>
+								<a href="#" class="cta">Détails</a>
+							</div>				
+						</div>
+						<!-- /info timbre -->
+					</article>
+
+					<article class="lot-card">
+						<picture>
+							<img src="assets/img/stamps-db/stamp-9.jpg" alt="Timbre brun représentant un quelconque kaiser Autrichien">
+						</picture>
+						
+						<!-- info timbre -->
+						<div class="info flow-content">
+							<header>
+								<div class="time-left">
+									<svg width="16" height="16">
+										<use href="assets/img/feather-core-clock.svg#clock" />
+									</svg>
+									<span>12j 22h 15m</span>
+								</div>
+								<h3>MALAYSIA - Federated Malay EDVII SG34b, 3c scarlet, NH MINT. Cat £38. WMK MULT</h3>
+							</header>
+						
+							<label class="toggle-favorite">
+								<input type="checkbox" class="visually-hidden">
+								<svg class="favorite-icon" width="16" height="16">
+									<use href="assets/img/five_pointed_star_solid.svg#fav-star" />
+								</svg>
+								Ajouter à vos favoris				
+							</label>
+												
+							<p class="description">Accession unsurf paper IMPERF PAIR,Michel 141x U,NHM,2</p>
+							
+							<div class="bidding-properties">
+								<div class="current-bid">
+									<span>Mise courante : </span>
+									<span class="bid">799,00&nbsp;$</span>
+								</div>
+							</div>
+
+							<div class="card-actions">
+								<button class="place-your-bid" type="button">Placer une mise</button>
+								<a href="#" class="cta">Détails</a>
+							</div>				
+						</div>
+						<!-- /info timbre -->
+					</article>
+
+					<article class="lot-card">
+						<picture>
+							<img src="assets/img/stamps-db/stamp-10.jpg" alt="Timbre brun représentant un quelconque kaiser Autrichien">
+						</picture>
+						
+						<!-- info timbre -->
+						<div class="info flow-content">
+							<header>
+								<div class="time-left">
+									<svg width="16" height="16">
+										<use href="assets/img/feather-core-clock.svg#clock" />
+									</svg>
+									<span>12j 22h 15m</span>
+								</div>
+								<h3>Zanzibar EDVII SG226, 3c yellow-green, M MINT. Cat £14</h3>
+							</header>
+
+							<label class="toggle-favorite">
+								<input type="checkbox" class="visually-hidden">
+								<svg class="favorite-icon" width="16" height="16">
+									<use href="assets/img/five_pointed_star_solid.svg#fav-star" />
+								</svg>
+								Ajouter à vos favoris				
+							</label>
+												
+							<p class="description">Accession unsurf paper IMPERF PAIR,Michel 141x U,NHM,2</p>
+							
+							<div class="bidding-properties">
+								<div class="current-bid">
+									<span>Mise courante : </span>
+									<span class="bid">6 565,00&nbsp;$</span>
+								</div>
+							</div>
+
+							<div class="card-actions">
+								<button class="place-your-bid" type="button">Placer une mise</button>
+								<a href="#" class="cta">Détails</a>
+							</div>				
+						</div>
+						<!-- /info timbre -->
+					</article>
+
+					<article class="lot-card">
+						<picture>
+							<img src="assets/img/stamps-db/stamp-11.jpg" alt="Timbre brun représentant un quelconque kaiser Autrichien">
+						</picture>
+						
+						<!-- info timbre -->
+						<div class="info flow-content">
+							<header>
+								<div class="time-left">
+									<svg width="16" height="16">
+										<use href="assets/img/feather-core-clock.svg#clock" />
+									</svg>
+									<span>12j 22h 15m</span>
+								</div>
+								<h3>SG451, 5s bright rose-red, USED. Cat £85</h3>
+							</header>
+						
+							<label class="toggle-favorite">
+								<input type="checkbox" class="visually-hidden">
+								<svg class="favorite-icon" width="16" height="16">
+									<use href="assets/img/five_pointed_star_solid.svg#fav-star" />
+								</svg>
+								Ajouter à vos favoris				
+							</label>
+												
+							<p class="description">Accession unsurf paper IMPERF PAIR,Michel 141x U,NHM,2</p>
+							
+							<div class="bidding-properties">
+								<div class="current-bid">
+									<span>Mise courante : </span>
+									<span class="bid">2 250,00&nbsp;$</span>
+								</div>
+							</div>
+
+							<div class="card-actions">
+								<button class="place-your-bid" type="button">Placer une mise</button>
+								<a href="#" class="cta">Détails</a>
+							</div>				
+						</div>
+						<!-- /info timbre -->
+					</article>
+
+					<article class="lot-card">
+						<picture>
+							<img src="assets/img/stamps-db/stamp-12.jpg" alt="Timbre brun représentant un quelconque kaiser Autrichien">
+						</picture>
+						
+						<!-- info timbre -->
+						<div class="info flow-content">
+							<header>
+								<div class="time-left">
+									<svg width="16" height="16">
+										<use href="assets/img/feather-core-clock.svg#clock" />
+									</svg>
+									<span>12j 22h 15m</span>
+								</div>
+								<h3>SG249 SPEC M37(1), 7d grey-black, LH MINT. Cat £15</h3>
+							</header>
+													
+							<label class="toggle-favorite">
+								<input type="checkbox" class="visually-hidden">
+								<svg class="favorite-icon" width="16" height="16">
+									<use href="assets/img/five_pointed_star_solid.svg#fav-star" />
+								</svg>
+								Ajouter à vos favoris				
+							</label>
+												
+							<p class="description">Accession unsurf paper IMPERF PAIR,Michel 141x U,NHM,2</p>
+							
+							<div class="bidding-properties">
+								<div class="current-bid">
+									<span>Mise courante : </span>
+									<span class="bid">8 821,00&nbsp;$</span>
+								</div>
+							</div>
+
+							<div class="card-actions">
+								<button class="place-your-bid" type="button">Placer une mise</button>
+								<a href="#" class="cta">Détails</a>
+							</div>				
+						</div>
+						<!-- /info timbre -->
+					</article>
+										
+				</div>
+			</div>
+		</div>
+		<!-- /panneau entier catalogue -->
+		
+	</main>
+	<!-- /contenu -->
+	
+
+	<footer>
+		<nav aria-label="Secondary navigation">
+
+		</nav>
+	</footer>
+
+	<!-- SVG -->
+	
+
+	<!-- 
+		Icône loupe pour les boutons de recherche
+		Source: https://commons.wikimedia.org/wiki/File:Magnifying_glass_icon.svg
+	 -->
+	<svg xmlns="http://www.w3.org/2000/svg">
+		<symbol id="magnifying-glass" viewbox="0 0 490 490">
+			<path fill="none" stroke-width="40" stroke-linecap="round" d="m280,278a153,153 0 1,0-2,2l170,170m-91-117 110,110-26,26-110-110"/>
+		</symbol>
+	</svg>
+</body>
+</html>

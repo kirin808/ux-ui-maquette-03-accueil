@@ -1,0 +1,141 @@
+/* Dépendances */
+@import url("components/card.css");
+
+:root {
+	--grid-gap: var(--gutterHecto);
+
+	--card-min-size: 230px;
+}
+
+.product {
+	margin-bottom: var(--gutterKilo);
+}
+
+
+
+/* Grille principale */
+.product-grid {
+	display: grid;
+	grid:
+		"image	summary	bidding"
+		"image	details	bidding"
+		"...	details	bidding"
+		"sugg	sugg	bidding"
+		"...	...		bidding"
+		/ 1fr		2fr		1fr;
+	gap: var(--grid-gap);
+}
+
+.product-grid .panel-main-image {
+	grid-area: image;
+}
+
+.product-grid .panel-summary {
+	grid-area: summary;
+}
+
+.product-grid .panel-stamp-details {
+	grid-area: details;
+}
+
+.product-grid .panel-bidding {
+	grid-area: bidding;
+}
+
+.product-grid .panel-suggestions {
+	grid-area: sugg;
+}
+
+
+
+
+
+.product .panel-main-image picture {
+	display: block;
+	position: relative;
+
+	border-radius: var(--radius);
+}
+
+.product .stamp-details {
+	column-count: 3;
+	column-gap: var(--gutter);
+}
+
+.product .stamp-details > * {
+	break-inside: avoid;
+}
+
+.product section {
+	padding: var(--gutter);
+	
+	border-radius: var(--radius);
+
+	background-color: var(--beige);
+	box-shadow: var(--shadow);
+}
+
+.product dt {
+	font-weight: 700;
+}
+
+.product .panel-bidding svg {
+	height: 1em;
+	width: auto;
+}
+
+.product .panel-faq {
+	margin-top: var(--gutterHecto);
+}
+
+.product .time-left {
+	display: flex;
+	align-items: center;
+	gap: var(--gutterMilli);
+
+	font-size: 1.2em;
+}
+
+.product .time-left > svg {
+	stroke: var(--purple-primary-dark);
+}
+
+.product .current-bid {
+	font-size: 1.2em;
+}
+
+.product .current-bid > span:first-child {
+	display: block;
+}
+
+.product .current-bid > span:last-child {
+	font-weight: 700;
+}
+
+.product .place-bid > div {
+	display: flex;
+	gap: var(--gutterCenti)
+}
+
+.product .place-bid label {
+	display: block;
+}
+
+.product .place-bid input {
+	flex-basis: calc(100% / 3);
+	flex-grow: 1;
+
+	min-width: 10ch;
+}
+
+.product .place-bid button {
+	flex-shrink: 0;
+
+	width: auto;
+}
+
+.product .panel-suggestions .grid {	
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(var(--card-min-size), 1fr));
+	gap: var(--gutterHecto);
+}

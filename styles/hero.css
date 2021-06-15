@@ -1,0 +1,22 @@
+/* En-têtes */
+.hero {
+	text-align: center;
+}
+
+.hero div:not(.text-wrapper) {
+	max-width: max-content;
+	padding: var(--gutterKilo) var(--gutter);
+}
+
+.hero :is(span, small) {
+	display: block;
+}
+
+.hero h1 {
+	max-width: 9ch;
+	margin-top: 0;
+}
+
+.hero .ornement-top {
+	margin-bottom: -10px;
+}

@@ -1,0 +1,66 @@
+:root {
+	--fontSizeInitial: 1rem;
+	--fontBase: 1vw;
+	--fontScale: 1.414; /* Augmented fourth https://type-scale.com */
+	
+	--fontScalingMega: calc(var(--fontScale) * var(--fontScale) * var(--fontScale) * var(--fontScale) * var(--fontScale));
+	--fontScalingKilo: calc(var(--fontScale) * var(--fontScale) * var(--fontScale) * var(--fontScale));
+	--fontScalingHecto: calc(var(--fontScale) * var(--fontScale) * var(--fontScale));
+	--fontScalingDeca: calc(var(--fontScale) * var(--fontScale));
+	--fontScalingBase: var(--fontScale);
+
+	--font-scaling-deci: 0.8em;
+	--font-scaling-centi: 0.7em;
+	--font-scaling-milli: 0.5em;
+}
+
+/* Taille de caractères et hauteur de ligne */
+html {
+	font-size: clamp(
+		var(--fontSizeInitial) * var(--fontScalingBase) / var(--fontScale),
+		var(--fontBase) * var(--fontScalingBase) / var(--fontScale),
+		var(--fontSizeInitial) * var(--fontScalingBase));
+	line-height: 1.5625;
+}
+
+h1 {
+	font-size: clamp(
+		var(--fontSizeInitial) * var(--fontScalingMega) / var(--fontScale),
+		var(--fontBase) * var(--fontScalingMega) / var(--fontScale),
+		var(--fontSizeInitial) * var(--fontScalingMega));
+	line-height: 1.15em;
+
+	max-width: 25ch;
+}
+
+h2,
+.hero h1 {
+	font-size: clamp(
+		var(--fontSizeInitial) * var(--fontScalingKilo) / var(--fontScale),
+		var(--fontBase) * var(--fontScalingKilo) / var(--fontScale),
+		var(--fontSizeInitial) * var(--fontScalingKilo));
+	line-height: 1.025em;
+}
+
+h3 { 
+	font-size: clamp(
+		var(--fontSizeInitial) * var(--fontScalingDeca) / var(--fontScale),
+		var(--fontBase) * var(--fontScalingDeca) / var(--fontScale),
+		var(--fontSizeInitial) * var(--fontScalingDeca));
+	line-height: 1.1em;
+}
+
+h4 {
+	font-size: var(--fontScalingBase);
+}
+
+
+/* Familles de polices */
+body {
+	font-family: Montserrat, proxima-nova, sans-serif;
+}
+
+h1, h2, h3, h4,
+.hero div {
+	font-family: Lora, serif;
+}
