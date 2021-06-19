@@ -51,8 +51,7 @@
 }
 
 .content {
-	padding-left: var(--content-padding);
-	padding-right: var(--content-padding);
+	padding-inline: var(--content-padding);
 }
 
 

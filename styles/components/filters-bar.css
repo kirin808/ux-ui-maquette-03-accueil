@@ -7,9 +7,14 @@
 	box-shadow: var(--shadow);
 
 	--marker-color: var(--beige-dark);
+
+
+	transition-property: left;
+	transition-duration: var(--anim-duration-fast);
 }
 
 .filters-bar fieldset {
+	min-width: 0;
 	padding: var(--gutterCenti);
 	padding-block-end: var(--gutter);
 	border: none;
@@ -39,11 +44,10 @@
 
 .filters-bar label {
 	display: block;
-
-	font-size: var(--font-scaling-deci);
 }
 
 .filters-bar input {
+	max-width: 100%;
 	background-color: var(--beige-light);
 }
 

@@ -243,8 +243,7 @@
                     data.zoomedImg.element.style.position = 'absolute';
                     data.zoomedImg.element.style.top = data.zoomedImgOffset.vertical + 'px';
                     data.zoomedImg.element.style.right = `calc(-1 * ${data.zoomedImgOffset.horizontal})`;
-                    console.log(
-                        data.zoomedImg.element.style.right = `calc(-1 * ${data.zoomedImgOffset.horizontal.trim()})`);
+                    
                     // data.zoomedImg.element.style.right = data.zoomedImgOffset.horizontal - (data.zoomedImgOffset.horizontal * 2) + 'px';
                     data.zoomedImg.element.style.transform = 'translateX(100%)';
                     break;

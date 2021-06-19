@@ -15,9 +15,13 @@
 	<!-- Stylesheets -->
 	<link rel="stylesheet" href="./styles/main.css">
 	<link rel="stylesheet" href="./styles/catalog.css">
+	<link rel="stylesheet" media="screen and (max-width: 990px)" href="./styles/adapt-to-990px.css">
+	<link rel="stylesheet" media="screen and (max-width: 540px)" href="./styles/adapt-to-540px.css">
+	<link rel="stylesheet" media="screen and (max-width: 990px)" href="./styles/catalog-to-990px.css">
 
 	<!-- Scripts -->
 	<script type="module" src="./scripts/script.js"></script>
+	<script type="module" src="./scripts/catalog.js"></script>
 	
 </head>
 
@@ -46,17 +50,19 @@
 	
 
 	<!-- navigation principale :: click menu -->
-	<nav aria-label="Primary navigation">
+	<nav class="primary-navigation" aria-label="Primary navigation">
 		<div class="menu-wrapper content">
 			<ul class="click-menu">
-				<li><a class="top-level-action" href="#">Accueil</a></li>
+				<li class="home-link"><a class="top-level-action" href="#">Accueil</a></li>
 			
 				<li aria-expanded="false" data-menu-panel="catalogue">
 					<button class="top-level-action" type="button">
-						Catalogue de produits
-						<svg class="down-arrow" width="16" height="16">
-							<use href="assets/img/down-arrow.svg#arrow" />
-						</svg>
+						<div>
+							Catalogue de produits
+							<svg class="down-arrow" width="16" height="16">
+								<use href="assets/img/down-arrow.svg#arrow" />
+							</svg>
+						</div>
 					</button>
 					<ul aria-hidden="true">
 						<li class="no-action-item" aria-current="page"><span >Consulter le catalogue</span></li>
@@ -77,10 +83,19 @@
 				</li>
 				<li aria-expanded="false" data-menu-panel="actualites">
 					<button class="top-level-action" type="button">
-						Actualités
-						<svg class="down-arrow" width="16" height="16">
-							<use href="assets/img/down-arrow.svg#arrow" />
-						</svg>
+						<div class="mobile">
+							<svg class="mobile-icon" width="16" height="16">
+								<use href="assets/img/icons/news.svg#news" />
+							</svg>
+							Actualités
+						</div>
+						
+						<div class="full">
+							Actualités
+							<svg class="down-arrow" width="16" height="16">
+								<use href="assets/img/down-arrow.svg#arrow" />
+							</svg>
+						</div>
 					</button>
 					<ul aria-hidden="true">
 						<li><a href="#">Toutes les actualités</a></li>
@@ -130,7 +145,7 @@
 			<div class="filters-bar">
 				<!-- <h2>Filtres</h2> -->
 
-				<form action="" class="flow-content">
+				<form name="filters" action="" class="flow-content">
 					<fieldset>
 						<details>
 							<summary>
@@ -248,6 +263,18 @@
 						<button type="reset">Réinitialiser les filtres</button>
 					</div>
 				</form>
+
+				<!-- Navigation adaptative -->
+				<div class="show-filters-button">
+					<button>			
+						<span>
+							Filtres
+							<svg class="right-arrow" width="16" height="16">
+								<use href="assets/img/down-arrow.svg#arrow" />
+							</svg>
+						</span>
+					</button>
+				</div>
 			</div>
 
 			<div class="item-listing grid-view flow-content">
@@ -340,7 +367,7 @@
 
 							<div class="card-actions">
 								<button class="place-your-bid" type="button">Placer une mise</button>
-								<a href="#" class="cta">Détails</a>
+								<a href="produit.html" class="cta">Détails</a>
 							</div>
 						</div>
 						<!-- /info timbre -->
@@ -820,10 +847,90 @@
 				</div>
 			</div>
 		</div>
-		<!-- /panneau entier catalogue -->
-		
+		<!-- /panneau entier catalogue -->				
 	</main>
 	<!-- /contenu -->
+
+	<!-- navigation mobile -->
+	<nav class="primary-navigation-mobile">
+		<div class="menu-wrapper content">
+			<ul class="click-menu sub-on-top">
+				<li aria-expanded="false" data-menu-panel="catalogue">
+					<button class="top-level-action" type="button">
+						<div class="bottom-nav-icon">
+							<svg class="mobile-icon" width="16" height="16">
+								<use href="assets/img/icons/catalog.svg#stamp" />
+							</svg>
+							<span class="mobile-nav-label">Catalogue</span>
+						</div class="bottom-nav-icon">
+					</button>
+
+					<ul aria-hidden="true">
+						<li class="no-action-item" aria-current="page"><span >Consulter le catalogue</span></li>
+						<li class="no-action-item">
+							<span>Effectuer une rechercher</span>
+			
+							<div class="search-box">
+								<input type="text" aria-label="Recherche" placeholder="Votre recherche...">
+								<button class="white-overlay" type="button">
+									<span class="visually-hidden">Lancer la recherche</span>
+									<svg class="magnifying-glass-icon" width="16" height="16">
+										<use href="assets/img/magnifying-glass-icon.svg#magnifying-glass" />
+									</svg>
+								</button>
+							</div>
+						</li>
+					</ul>
+				</li>
+
+				<li aria-expanded="false" data-menu-panel="actualites">
+					<button class="top-level-action" type="button">
+						<div class="bottom-nav-icon">
+							<svg class="mobile-icon" width="16" height="16">
+								<use href="assets/img/icons/news.svg#news" />
+							</svg>
+							<span class="mobile-nav-label">Actualités</span>
+						</div class="bottom-nav-icon">
+					</button>
+
+					<ul aria-hidden="true">
+						<li><a href="#">Toutes les actualités</a></li>
+						<li><a href="#">Timbres</a></li>
+						<li><a href="#">Enchères</a></li>
+						<li><a href="#">Bridge</a></li>
+					</ul>
+				</li>
+				<li aria-expanded="false" data-menu-panel="contacts">
+					<button class="top-level-action" type="button">
+						<div class="bottom-nav-icon">
+							<svg class="mobile-icon" width="16" height="16">
+								<use href="assets/img/icons/contact.svg#envelop" />
+							</svg>
+							<span class="mobile-nav-label">Contact</span>
+						</div class="bottom-nav-icon">
+					</button>
+
+					<ul aria-hidden="true">
+						<li><a href="#">Angleterre</a></li>
+						<li><a href="#">Canada</a></li>
+						<li><a href="#">États-Unis</a></li>
+						<li><a href="#">Australie</a></li>
+					</ul>
+				</li>
+				<li>
+					<button class="top-level-action" type="button">
+						<div class="bottom-nav-icon">
+							<svg class="mobile-icon" width="16" height="16">
+								<use href="assets/img/icons/login.svg#silhouette" />
+							</svg>
+							<span class="mobile-nav-label">Compte</span>
+						</div class="bottom-nav-icon">
+					</button>
+				</li>
+			</ul>
+		</div>
+	</nav>
+	<!-- /navigation mobile -->
 	
 
 	<footer>
@@ -831,18 +938,5 @@
 
 		</nav>
 	</footer>
-
-	<!-- SVG -->
-	
-
-	<!-- 
-		Icône loupe pour les boutons de recherche
-		Source: https://commons.wikimedia.org/wiki/File:Magnifying_glass_icon.svg
-	 -->
-	<svg xmlns="http://www.w3.org/2000/svg">
-		<symbol id="magnifying-glass" viewbox="0 0 490 490">
-			<path fill="none" stroke-width="40" stroke-linecap="round" d="m280,278a153,153 0 1,0-2,2l170,170m-91-117 110,110-26,26-110-110"/>
-		</symbol>
-	</svg>
 </body>
 </html>

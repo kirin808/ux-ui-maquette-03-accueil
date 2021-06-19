@@ -3,7 +3,7 @@
 	text-align: center;
 }
 
-.hero div:not(.text-wrapper) {
+.hero .blue-overlay {
 	max-width: max-content;
 	padding: var(--gutterKilo) var(--gutter);
 }
@@ -15,6 +15,7 @@
 .hero h1 {
 	max-width: 9ch;
 	margin-top: 0;
+	margin-inline: auto;
 }
 
 .hero .ornement-top {

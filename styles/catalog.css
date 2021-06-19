@@ -16,6 +16,10 @@
 	align-self: flex-start;
 }
 
+.show-filters-button {
+	display: none;
+}
+
 .catalog-panel .toolbar {
 	display: flex;
 	justify-content: space-between;
@@ -41,10 +45,6 @@
 	display: block;
 	font-size: var(--font-scaling-centi);
 }
-
-/*.catalog-panel .toolbar button {
-	max-width: max-content;
-}*/
 
 .catalog-panel .toolbar input {
 	background-color: var(--beige);

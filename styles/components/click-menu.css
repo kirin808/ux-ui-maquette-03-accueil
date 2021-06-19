@@ -35,9 +35,17 @@
 
 .click-menu ul {
 	position: absolute;
-	top: 100%;
 	min-width: max-content;
 	width: 100%;
+}
+
+/* Positionnement des sous-menus */
+.click-menu.sub-on-bottom ul {
+	top: 100%;
+}
+
+.click-menu.sub-on-top ul {
+	bottom: 100%;
 }
 
 .click-menu .top-level-action {

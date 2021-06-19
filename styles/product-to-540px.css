@@ -1,0 +1,11 @@
+/* Grille principale */
+.product-grid {
+	display: grid;
+	grid:
+		"image"
+		"summary"
+		"details"
+		"bidding"
+		"sugg";
+	gap: var(--grid-gap);
+}

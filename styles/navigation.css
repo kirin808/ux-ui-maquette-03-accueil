@@ -1,5 +1,9 @@
 @import url("components/click-menu.css");
 
+:root {
+	--breadcrumb-gap: var(--gutterCenti);
+}
+
 [aria-label="Primary navigation"] .search-box button {
 	background-color: var(--blue-primary);
 }
@@ -8,17 +12,27 @@
 	background-color: var(--purple-primary-dark);
 }
 
+[aria-label="Primary navigation"] .mobile {
+	display: none;
+}
+
 
 
 /* Fil d'Ariane */
 .breadcrumb {
 	display: flex;
-	gap: var(--gutterCenti);
-
+	flex-wrap: wrap;
 	align-items: center;
+	gap: var(--breadcrumb-gap);
 }
 
-.breadcrumb > * {
+.breadcrumb-level {
+	display: flex;
+	align-items: center;
+	gap: var(--breadcrumb-gap);
+}
+
+.breadcrumb > span {
 	max-width: 30ch;
 
 	white-space: nowrap;

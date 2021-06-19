@@ -1,33 +1,70 @@
 :root {
-	--fontSizeInitial: 1rem;
-	--fontBase: 1vw;
-	--fontScale: 1.414; /* Augmented fourth https://type-scale.com */
+	/* https://type-scale.com */
+	--augmented-fourth: 1.414;
+	--major-third: 1.250;
+	--major-second: 1.125;
 	
-	--fontScalingMega: calc(var(--fontScale) * var(--fontScale) * var(--fontScale) * var(--fontScale) * var(--fontScale));
-	--fontScalingKilo: calc(var(--fontScale) * var(--fontScale) * var(--fontScale) * var(--fontScale));
-	--fontScalingHecto: calc(var(--fontScale) * var(--fontScale) * var(--fontScale));
-	--fontScalingDeca: calc(var(--fontScale) * var(--fontScale));
-	--fontScalingBase: var(--fontScale);
+	--font-size-initial: 1rem;
+	--font-base: 1vw;
+	--font-scale: var(--augmented-fourth);
+	
+	--scaling-mega: calc(var(--font-scale) * var(--font-scale) * var(--font-scale) * var(--font-scale) * var(--font-scale));
+	--scaling-kilo: calc(var(--font-scale) * var(--font-scale) * var(--font-scale) * var(--font-scale));
+	--scaling-hecto: calc(var(--font-scale) * var(--font-scale) * var(--font-scale));
+	--scaling-deca: calc(var(--font-scale) * var(--font-scale));
 
-	--font-scaling-deci: 0.8em;
+	--font-scaling-mega: clamp(
+		var(--font-size-initial) * var(--scaling-mega) / var(--font-scale),
+		var(--font-base) * var(--scaling-mega) / var(--font-scale),
+		var(--font-size-initial) * var(--scaling-mega)
+	);
+
+	--font-scaling-kilo: clamp(
+		var(--font-size-initial) * var(--scaling-kilo) / var(--font-scale),
+		var(--font-base) * var(--scaling-kilo) / var(--font-scale),
+		var(--font-size-initial) * var(--scaling-kilo)
+	);
+
+	--font-scaling-hecto: clamp(
+		var(--font-size-initial) * var(--scaling-hecto) / var(--font-scale),
+		var(--font-base) * var(--scaling-hecto) / var(--font-scale),
+		var(--font-size-initial) * var(--scaling-hecto)
+	);
+
+	--font-scaling-deca: clamp(
+		var(--font-size-initial) * var(--scaling-deca) / var(--font-scale),
+		var(--font-base) * var(--scaling-deca) / var(--font-scale),
+		var(--font-size-initial) * var(--scaling-deca)
+	);
+
+	--font-scaling-base: clamp(
+		var(--font-size-initial),
+		var(--font-base) * var(--font-scale),
+		var(--font-size-initial) * var(--font-scale)
+	);
+
+	--font-scaling-deci: clamp(
+		var(--font-size-initial) / var(--scaling-deca) * var(--font-scale),
+		var(--font-base) / var(--scaling-deca) * var(--font-scale),
+		var(--font-size-initial) / var(--scaling-deca) * var(--font-scale)
+	);
+	
 	--font-scaling-centi: 0.7em;
 	--font-scaling-milli: 0.5em;
 }
 
 /* Taille de caractères et hauteur de ligne */
 html {
-	font-size: clamp(
-		var(--fontSizeInitial) * var(--fontScalingBase) / var(--fontScale),
-		var(--fontBase) * var(--fontScalingBase) / var(--fontScale),
-		var(--fontSizeInitial) * var(--fontScalingBase));
+	font-size: var(--font-scaling-base);
 	line-height: 1.5625;
 }
 
 h1 {
-	font-size: clamp(
-		var(--fontSizeInitial) * var(--fontScalingMega) / var(--fontScale),
-		var(--fontBase) * var(--fontScalingMega) / var(--fontScale),
-		var(--fontSizeInitial) * var(--fontScalingMega));
+	font-size: var(--font-scaling-mega);
+	/* font-size: clamp(
+		var(--font-size-initial) * var(--fontScalingMega) / var(--font-scale),
+		var(--font-base) * var(--fontScalingMega) / var(--font-scale),
+		var(--font-size-initial) * var(--fontScalingMega)); */
 	line-height: 1.15em;
 
 	max-width: 25ch;
@@ -35,18 +72,15 @@ h1 {
 
 h2,
 .hero h1 {
-	font-size: clamp(
-		var(--fontSizeInitial) * var(--fontScalingKilo) / var(--fontScale),
-		var(--fontBase) * var(--fontScalingKilo) / var(--fontScale),
-		var(--fontSizeInitial) * var(--fontScalingKilo));
+	font-size: var(--font-scaling-kilo);
 	line-height: 1.025em;
 }
 
 h3 { 
 	font-size: clamp(
-		var(--fontSizeInitial) * var(--fontScalingDeca) / var(--fontScale),
-		var(--fontBase) * var(--fontScalingDeca) / var(--fontScale),
-		var(--fontSizeInitial) * var(--fontScalingDeca));
+		var(--font-size-initial) * var(--font-scaling-deca) / var(--font-scale),
+		var(--font-base) * var(--font-scaling-deca) / var(--font-scale),
+		var(--font-size-initial) * var(--font-scaling-deca));
 	line-height: 1.1em;
 }
 

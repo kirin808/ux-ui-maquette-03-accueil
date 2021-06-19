@@ -20,8 +20,7 @@
 		"image	summary	bidding"
 		"image	details	bidding"
 		"...	details	bidding"
-		"sugg	sugg	bidding"
-		"...	...		bidding"
+		"sugg	sugg	sugg"
 		/ 1fr		2fr		1fr;
 	gap: var(--grid-gap);
 }
@@ -60,6 +59,7 @@
 .product .stamp-details {
 	column-count: 3;
 	column-gap: var(--gutter);
+	column-width: 12ch;
 }
 
 .product .stamp-details > * {
@@ -114,7 +114,9 @@
 
 .product .place-bid > div {
 	display: flex;
-	gap: var(--gutterCenti)
+	flex-wrap: wrap;
+	gap: var(--gutterCenti);
+
 }
 
 .product .place-bid label {
@@ -130,8 +132,7 @@
 
 .product .place-bid button {
 	flex-shrink: 0;
-
-	width: auto;
+	flex-grow: 1;
 }
 
 .product .panel-suggestions .grid {	

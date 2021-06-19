@@ -1,5 +1,5 @@
 :root {
-	--vPadding-fields: var(--gutterCenti);
+	--vPadding-fields: var(--gutter);
 	--hPadding-fields: var(--gutterDeci);
 
 }
@@ -8,14 +8,14 @@ input,
 button,
 select,
 .cta {
+	padding-block: var(--vPadding-fields);
+	padding-inline: var(--hPadding-fields);
 	border-radius: var(--radius);
 }
 
 input,
 button,
 select {
-	padding: var(--vPadding-fields) var(--hPadding-fields);
-
 	border: none;
 	font-size: inherit;
 	font-family: inherit;
@@ -52,7 +52,6 @@ button:not(.top-level-action),
 	gap: var(--gutterMilli);
 
 	width: 100%;
-	padding: var(--vPadding-fields) var(--hPadding-buttons);
 	line-height: 1.25em;
 
 	text-align: center;

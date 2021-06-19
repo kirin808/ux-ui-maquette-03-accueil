@@ -14,18 +14,11 @@
 
 	<!-- Stylesheets -->
 	<link rel="stylesheet" href="./styles/main.css">
-	<link rel="stylesheet" media="screen and (max-width: 990px)" href="./styles/adapt-to-990px.css">	
-	<link rel="stylesheet" media="screen and (max-width: 540px)" href="./styles/adapt-to-540px.css">
-
-	<link rel="stylesheet" href="./styles/product.css">
-	<link rel="stylesheet" media="screen and (max-width: 990px)" href="./styles/product-to-990px.css">
-	<link rel="stylesheet" media="screen and (max-width: 540px)" href="./styles/product-to-540px.css">
-	
-		
+	<link rel="stylesheet" href="./styles/index.css">
 
 	<!-- Scripts -->
 	<script src="./scripts/modules/js-image-zoom.js"></script>
-	<script type="module" src="./scripts/zoomer.js" defer></script>
+	<script src="./scripts/zoomer.js" defer></script>
 	<script type="module" src="./scripts/script.js"></script>
 	
 </head>
@@ -55,22 +48,20 @@
 	
 
 	<!-- navigation principale :: click menu -->
-	<nav class="primary-navigation" aria-label="Primary navigation">
+	<nav aria-label="Primary navigation">
 		<div class="menu-wrapper content">
 			<ul class="click-menu">
-				<li class="home-link"><a class="top-level-action" href="#">Accueil</a></li>
+				<li><a class="top-level-action" href="#">Accueil</a></li>
 			
 				<li aria-expanded="false" data-menu-panel="catalogue">
 					<button class="top-level-action" type="button">
-						<div>
-							Catalogue de produits
-							<svg class="down-arrow" width="16" height="16">
-								<use href="assets/img/down-arrow.svg#arrow" />
-							</svg>
-						</div>
+						Catalogue de produits
+						<svg class="down-arrow" width="16" height="16">
+							<use href="assets/img/down-arrow.svg#arrow" />
+						</svg>
 					</button>
 					<ul aria-hidden="true">
-						<li class="no-action-item" aria-current="page"><span >Consulter le catalogue</span></li>
+						<li><a href="#">Consulter le catalogue</a></li>
 						<li class="no-action-item">
 							<span>Effectuer une rechercher</span>
 			
@@ -88,19 +79,10 @@
 				</li>
 				<li aria-expanded="false" data-menu-panel="actualites">
 					<button class="top-level-action" type="button">
-						<div class="mobile">
-							<svg class="mobile-icon" width="16" height="16">
-								<use href="assets/img/icons/news.svg#news" />
-							</svg>
-							Actualités
-						</div>
-						
-						<div class="full">
-							Actualités
-							<svg class="down-arrow" width="16" height="16">
-								<use href="assets/img/down-arrow.svg#arrow" />
-							</svg>
-						</div>
+						Actualités
+						<svg class="down-arrow" width="16" height="16">
+							<use href="assets/img/down-arrow.svg#arrow" />
+						</svg>
 					</button>
 					<ul aria-hidden="true">
 						<li><a href="#">Toutes les actualités</a></li>
@@ -152,27 +134,18 @@
 		</nav> -->
 
 		<nav class="breadcrumb" aria-label="Fil d'Ariane">
-			<div class="breadcrumb-level">
-				<a class="text-link" href="#">Accueil</a>
-				<svg class="separator" width="16" height="16">
-					<use href="assets/img/down-arrow.svg#arrow" />
-				</svg>
-			</div>
-
-			<div class="breadcrumb-level">
-				<a class="text-link" href="#">Pays</a>
-				<svg class="separator" width="16" height="16">
-					<use href="assets/img/down-arrow.svg#arrow" />
-				</svg>
-			</div>
-
-			<div class="breadcrumb-level">
-				<a class="text-link" href="#">Luxembourg</a>
-				<svg class="separator" width="16" height="16">
-					<use href="assets/img/down-arrow.svg#arrow" />
-				</svg>
-			</div>
-
+			<a class="text-link" href="#">Accueil</a>
+			<svg class="separator" width="16" height="16">
+				<use href="assets/img/down-arrow.svg#arrow" />
+			</svg>
+			<a class="text-link" href="#">Pays</a>
+			<svg class="separator" width="16" height="16">
+				<use href="assets/img/down-arrow.svg#arrow" />
+			</svg>
+			<a class="text-link" href="#">Luxembourg</a>
+			<svg class="separator" width="16" height="16">
+				<use href="assets/img/down-arrow.svg#arrow" />
+			</svg>
 			<span aria-current="page">Luxembourg 1962 Early Issue Fine Mint Hinged 1.50F. NW-134574</span>
 		</nav>
 
@@ -319,7 +292,7 @@
 				
 				
 				<div class="panel-suggestions flow-content">
-					<h3>Autres items suggérés</h3>
+					<h3>Items les plus vus cette semaine</h3>
 
 					<div class="grid">
 						<article class="lot-card">
@@ -497,87 +470,6 @@
 		
 	</main>
 	<!-- /contenu -->
-
-	<!-- navigation mobile -->
-	<nav class="primary-navigation-mobile">
-		<div class="menu-wrapper content">
-			<ul class="click-menu sub-on-top">
-				<li aria-expanded="false" data-menu-panel="catalogue">
-					<button class="top-level-action" type="button">
-						<div class="bottom-nav-icon">
-							<svg class="mobile-icon" width="16" height="16">
-								<use href="assets/img/icons/catalog.svg#stamp" />
-							</svg>
-							<span class="mobile-nav-label">Catalogue</span>
-						</div class="bottom-nav-icon">
-					</button>
-
-					<ul aria-hidden="true">
-						<li class="no-action-item" aria-current="page"><span >Consulter le catalogue</span></li>
-						<li class="no-action-item">
-							<span>Effectuer une rechercher</span>
-			
-							<div class="search-box">
-								<input type="text" aria-label="Recherche" placeholder="Votre recherche...">
-								<button class="white-overlay" type="button">
-									<span class="visually-hidden">Lancer la recherche</span>
-									<svg class="magnifying-glass-icon" width="16" height="16">
-										<use href="assets/img/magnifying-glass-icon.svg#magnifying-glass" />
-									</svg>
-								</button>
-							</div>
-						</li>
-					</ul>
-				</li>
-
-				<li aria-expanded="false" data-menu-panel="actualites">
-					<button class="top-level-action" type="button">
-						<div class="bottom-nav-icon">
-							<svg class="mobile-icon" width="16" height="16">
-								<use href="assets/img/icons/news.svg#news" />
-							</svg>
-							<span class="mobile-nav-label">Actualités</span>
-						</div class="bottom-nav-icon">
-					</button>
-
-					<ul aria-hidden="true">
-						<li><a href="#">Toutes les actualités</a></li>
-						<li><a href="#">Timbres</a></li>
-						<li><a href="#">Enchères</a></li>
-						<li><a href="#">Bridge</a></li>
-					</ul>
-				</li>
-				<li aria-expanded="false" data-menu-panel="contacts">
-					<button class="top-level-action" type="button">
-						<div class="bottom-nav-icon">
-							<svg class="mobile-icon" width="16" height="16">
-								<use href="assets/img/icons/contact.svg#envelop" />
-							</svg>
-							<span class="mobile-nav-label">Contact</span>
-						</div class="bottom-nav-icon">
-					</button>
-
-					<ul aria-hidden="true">
-						<li><a href="#">Angleterre</a></li>
-						<li><a href="#">Canada</a></li>
-						<li><a href="#">États-Unis</a></li>
-						<li><a href="#">Australie</a></li>
-					</ul>
-				</li>
-				<li>
-					<button class="top-level-action" type="button">
-						<div class="bottom-nav-icon">
-							<svg class="mobile-icon" width="16" height="16">
-								<use href="assets/img/icons/login.svg#silhouette" />
-							</svg>
-							<span class="mobile-nav-label">Compte</span>
-						</div class="bottom-nav-icon">
-					</button>
-				</li>
-			</ul>
-		</div>
-	</nav>
-	<!-- /navigation mobile -->
 	
 
 	<footer>
